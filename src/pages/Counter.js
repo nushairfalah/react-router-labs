@@ -1,11 +1,12 @@
 import React from 'react';
+import '../App.css';
 import { Link } from 'react-router-dom';
 
-function CounterPage() {
+function CounterPage({ history }) {
     return (
         <div>
             <p>Counter Page</p>
-            <Link to='/home'><button>Home Page</button></Link>
+            <button onClick={() => history.goBack()}>Back to Profile Page</button>
         </div>
     )
 }
